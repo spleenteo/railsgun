@@ -1,0 +1,86 @@
+it:
+    -   title: "Prima pagina"
+        pretty_url: "prima-pagina"
+        filename: "it_prima_pagina"
+        options:
+            meta_title: "Railsgun - home page esempio"
+            meta_keywords: "railsgun"
+            meta_description: Railsgun - home page esempio"
+    -   title: "Prodotti"
+        pretty_url: "prodotti"
+        filename: "it_prodotti"
+        children:
+            -   title: "Prima linea prodotti"
+                pretty_url: "prima-linea-prodotti"
+                filename: "it_prima_linea_prodotti"
+            -   title: "Seconda linea prodotti"
+                pretty_url: "seconda-linea-prodotti"
+                filename: "it_seconda_linea_prodotti"
+            -   title: "Seconda linea prodotti"
+                pretty_url: "seconda-linea-prodotti"
+                filename: "it_seconda_linea_prodotti"
+    -   title: "Chi siamo"
+        pretty_url: "chi-siamo"
+        filename: "it_chi_siamo"
+    -   title: "Cosa facciamo"
+        pretty_url: "cosa-facciamo"
+        filename: "it_cosa_facciamo"
+    -   title: "Contatti"
+        pretty_url: "contatti"
+        filename: "it_contatti"
+
+en:
+    -   title: "Home"
+        pretty_url: "home"
+        filename: "en_home"
+        options:
+            meta_title: "Railsgun - example home page"
+            meta_keywords: "railsgun"
+            meta_description: Railsgun - example home page"
+    -   title: "Products"
+        pretty_url: "products"
+        filename: "en_products"
+        children:
+            -   title: "First product line"
+                pretty_url: "first-product-line"
+                filename: "en_first_product_line"
+            -   title: "Second product line"
+                pretty_url: "second-product-line"
+                filename: "en_second_product_line"
+            -   title: "Third product line"
+                pretty_url: "third-product-line"
+                filename: "en_third_product_line"
+    -   title: "Who we are"
+        pretty_url: "who-we-are"
+        filename: "en_who_we_are"
+    -   title: "What we do"
+        pretty_url: "what-we-do"
+        filename: "en_what_we_do"
+    -   title: "Contacts"
+        pretty_url: "contacts"
+        filename: "ien_contacts"
+
+
+
+
+    # Example options
+    # Non cancellare
+    # TO-DO better examples
+    #
+    # -   title: "L'esperto"
+    #     pretty_url: "esperto"
+    #     filename: "it_esperto"
+    #     options:
+    #         go_to_first_child: false
+    #         override_url: "/pages/test"
+    #         meta_title: "L'esperto risponde esperto"
+    #         meta_keywords: "esperto, faq"
+    #         meta_description: "Una risposta tutta naturale"
+    #         layout_name: "cippalippa"
+    #      children:
+    #          -   title: "Pagina figlia"
+    #              pretty_url: "pagina-figlia"
+    #              filename: "it_pagina_figlia"
+            
+            
+            

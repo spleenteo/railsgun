@@ -1,0 +1,13 @@
+log/*.log
+tmp/**/*
+.DS_Store
+Thumbs.db
+public/assets/**/*
+public/system/**/*
+config/database.yml
+config/deploy.rb
+sublime-develop.sublime-project
+public/it/**/*
+public/it/*
+public/en/**/*
+public/en/*

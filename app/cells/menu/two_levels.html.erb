@@ -1,0 +1,15 @@
+<div class='twolevels-menu'>
+	<ul>
+		<% @first_level_pages.map do |p| %>
+			<li<%= " class =\"current\"".hs if p.id == @page.id || @family_pages_ids.include?(p.id) %>><%= link_to "<span>#{p.title}</span>".hs, page_link_destination(p), :remote => @remote %></li>
+				<% unless p.children.blank? %>	
+					<ul>
+						<% p.children.map do |c| %>
+							<li<%= " class =\"current-children\"" if c.id == @page.id %>><%= link_to "<span>#{c.title}</span>".hs, page_link_destination(c), :remote => @remote %>
+						<% end %>
+					</ul>
+				<% end %>
+			</li>
+		<% end %>
+	</ul>
+</div>

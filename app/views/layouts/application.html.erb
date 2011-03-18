@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="<%= @lang %>">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Railsgun</title>
+  <meta name="description" content="Railsgun" />
+  <meta name="keywords" content= "railsgun" /> 
+  <meta name="authors" content= "Matteo Papadopoulos, Silvio Relli" />
+
+  <%= stylesheet_link_tag "960", "style" %>
+  <%= javascript_include_tag  "jquery",
+                              "rails",
+                              "jquery.tools.min",
+                              "jquery.easing",
+                              "jquery.cycle.all.min",
+                              "jquery.equalHeightColumns.min",
+                              "application"
+  %>  
+  <%= csrf_meta_tag %>
+</head>
+
+<body>
+    <header>
+        <a class="logo" href="/"><%= image_tag("/images/logo.png") %><h1>Railsgun</h1></a>
+        <nav>
+            <%= render_cell :menu, :two_levels, :page => @page %>
+            <%#= render_cell :menu, :two_levels, :page => @page, :remote => true %>
+        </nav>
+    </header>
+    
+    <div id='container'>
+        <%= yield %>
+    </div>
+</body>
+</html>

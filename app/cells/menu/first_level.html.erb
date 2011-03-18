@@ -1,0 +1,7 @@
+<div class='firstlevel-menu'>
+	<ul>
+		<% @first_level_pages.map do |p| %>		
+			<li<%= " class =\"current\"".hs if p.id == @page.id || @family_pages_ids.include?(p.id) %>><%= link_to "<span>#{p.title}</span>".hs, page_link_destination(p), :remote => @remote %></li>
+		<% end %>
+	</ul>
+</div>

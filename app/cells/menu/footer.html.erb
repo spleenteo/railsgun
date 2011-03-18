@@ -1,0 +1,8 @@
+<div class='footer-menu'>
+	<% @first_level_pages.map do |p| %>
+		<ul>
+		    <li class='footer-roots'><%= link_to p.title, page_link_destination(p), :remote => @remote %></li>
+			<%= render :partial => "footer_item", :collection => p.children unless p.children.empty? %>
+		</ul>
+	<% end %>
+</div>
