@@ -1,0 +1,30 @@
+development:
+  adapter: mysql2
+  reconnect: false
+  database: railgun_development
+  encoding: utf8
+  pool: 5
+  host: 192.168.x.x
+  username: your_username
+  password: your_password
+
+test:
+  adapter: mysql2
+  reconnect: false
+  database: railgun_test
+  encoding: utf8
+  pool: 5
+  host: 192.168.x.x
+  username: your_username
+  password: your_password
+
+production:
+  adapter: mysql2
+  reconnect: false
+  database: railgun_production
+  encoding: utf8
+  pool: 5
+  host: 192.168.x.x
+  username: your_username
+  password: your_password
+
