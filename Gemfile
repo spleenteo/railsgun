@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.5'
+gem 'rails', '3.0.7'
 gem 'jquery-rails', '0.2.6'
 gem 'heroku', '>= 1.17.14'
 gem 'haml', '>= 3.0.25'
