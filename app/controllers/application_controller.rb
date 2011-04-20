@@ -31,9 +31,9 @@ class ApplicationController < ActionController::Base
     if !curr_lang.blank? && curr_lang.length == 2 && curr_lang =~ $AVAILABLE_LANGUAGES
       lang = curr_lang
     else
-      #lang = $DEFAULT_LANGUAGE
-      lang_tmp = request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first
-      lang = (lang_tmp =~ $AVAILABLE_LANGUAGES ? lang_tmp : $DEFAULT_LANGUAGE)
+      lang_tmp = $DEFAULT_LANGUAGE
+      lang_tmp = request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first unless request.env['HTTP_ACCEPT_LANGUAGE'].blank?
+      lang = ((lang_tmp && lang_tmp =~ $AVAILABLE_LANGUAGES) ? lang_tmp : $DEFAULT_LANGUAGE)
     end
     lang
   end
