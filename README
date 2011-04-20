@@ -1,20 +1,22 @@
 Railsgun
 =============
 
-That's a static site generator. How to shoot a fly with a cannon - or take a sledgehammer to crack a nut.
+How to shoot a fly with a cannon - or take a sledgehammer to crack a nut.
 
-A better documentation coming soon..
+Railsgun is a "pico" framework Rails based for creating quick and simple static websites.
 
-That's a rushed release.
+That's a rushed release :)
 
 Features
 --------
-* hierarchy organized pages
-* multilanguage
+* hierarchy organized pages via yaml conf file
+* multilanguage site - like yoursite.com/it/pagine-italiane and yoursite.com/en/english-pages
 * pretty urls
 * built with Ruby on Rails
+* UJS (unobtrusive javascript) ready
 * Heroku ready
-* Better info coming soon! Promised!
+* Integrated AWS S3/Cloudfront assets deployment
+* Caching
 	
 To-do
 -----
@@ -39,8 +41,8 @@ Installation
 	
 Usage
 -----
-* Generate pages tree via db/pages_tree.yml
-* Better info coming soon! Promised!
+* Generate pages tree via db/pages_tree.yml and then run 'rake pages_tree:generate'
+* Fill layouts and views partials
 		
 Credits
 -------
