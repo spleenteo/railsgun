@@ -1,0 +1,99 @@
+<!doctype html>
+<!--[if IE 7 ]>    <html lang="<%= @lang %>" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="<%= @lang %>" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="<%= @lang %>" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="<%= @lang %>" class="no-js"> <!--<![endif]-->
+
+<head>
+    <title>Railsgun - <%= yield :title %></title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Railsgun" />
+    <meta name="keywords" content= "railsgun" /> 
+    <meta name="authors" content= "Matteo Papadopoulos, Silvio Relli" />
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- some mobiles configurations -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 57px icon for iphone/ipad -->
+    <link rel="apple-touch-icon" href="" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <%# you can remove these two lines to load jquery from your local path %>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+    
+    <%= javascript_include_tag  "rails",
+                                "modernizr",
+                                "jquery.equalHeightColumns.min",
+                                "application"
+    %>
+    <%= csrf_meta_tag %>
+    
+    
+    <!-- STYLESHEETS -->
+    <%= stylesheet_link_tag "hive", "style", "demo" %>
+    
+    <%= yield :extra_head %>
+</head>
+
+<body>
+    <div class="hive_12">
+        <div class="cell_12">
+            <header>
+                <hgroup>
+                    <h1>Title</h1>
+                    <h2>a claim</h2>
+                </hgroup>
+                <nav>
+                    <ul>
+                        <li><a href="#">link 1</a></li>
+                        <li><a href="#">link 2</a></li>
+                        <li><a href="#">link 3</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+    
+        <div class="cell_8" id="container">
+            <article>
+                <%= yield %>
+              </article>
+        </div>
+        <div class="cell_4">
+            <aside>
+                <header>
+                    <h1>Pages</h1>
+                </header>
+                <%= render_cell :menu, :two_levels, :page => @page %>
+                
+                <%# use your site with remote js loading %>
+                <%#= render_cell :menu, :two_levels, :page => @page, :remote => true %>
+            </aside>
+        </div>
+
+        <div class="cell_12">
+            <footer>
+                <div class="cell_4 alpha">
+                    <section>
+                        footer 1
+                    </section>
+                </div>
+                <div class="cell_4">
+                    <section>
+                        footer 2
+                    </section>
+                </div>
+                <div class="cell_4 omega">
+                    <section>
+                        footer 3
+                    </section>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+</body>
